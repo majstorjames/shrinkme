@@ -1,6 +1,6 @@
 const path = require('path')
 const os = require('os')
-const { app, BrowserWindow, Menu, ipcMain, shell } = require('electron')
+const { app, BrowserWindow, Menu, ipcMain, shell  } = require('electron')
 const imagemin = require('imagemin')
 const imageminMozjpeg = require('imagemin-mozjpeg')
 const imageminPngquant = require('imagemin-pngquant')
@@ -8,7 +8,7 @@ const slash = require('slash')
 const log = require('electron-log')
 
 // Set env
-process.env.NODE_ENV = 'production'
+process.env.NODE_ENV = 'development'
 
 const isDev = process.env.NODE_ENV !== 'production' ? true : false
 const isMac = process.platform === 'darwin' ? true : false
@@ -32,9 +32,9 @@ function createMainWindow() {
   if (isDev) {
     mainWindow.webContents.openDevTools()
   }
-
   mainWindow.loadFile('./app/index.html')
 }
+
 
 function createAboutWindow() {
   aboutWindow = new BrowserWindow({
@@ -102,6 +102,7 @@ const menu = [
       ]
     : []),
 ]
+
 
 ipcMain.on('image:minimize', (e, options) => {
   options.dest = path.join(os.homedir(), 'shrinkme')

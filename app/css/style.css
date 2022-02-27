@@ -19,3 +19,9 @@
 #output-path {
   font-weight: bold;
 }
+
+.btn,.btn:hover,input[type=range]+.thumb{
+  background-color:#ff9600 ;
+  border-radius:15px;
+}
+
