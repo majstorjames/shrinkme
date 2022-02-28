@@ -26,6 +26,9 @@ function createMainWindow() {
     backgroundColor: 'white',
     webPreferences: {
       nodeIntegration: true,
+      worldSafeExecuteJavaScript: true,
+
+
     },
   })
 

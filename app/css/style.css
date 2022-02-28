@@ -21,7 +21,22 @@
 }
 
 .btn,.btn:hover,input[type=range]+.thumb{
-  background-color:#ff9600 ;
+  background-color:#ff9600;
   border-radius:15px;
+}
+
+.fa-camera{
+  color:black;
+}
+
+.shrink{
+  font-weight:900;
+  letter-spacing: -.25rem;
+  margin-left:-10px;
+
+}
+.me{
+  font-weight: 100;
+  letter-spacing: -.25rem;
 }
 
